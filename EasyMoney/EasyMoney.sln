@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{7204704E-C45
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Api", "EasyMoney.Api\EasyMoney.Api.csproj", "{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Application", "EasyMoney.Application\EasyMoney.Application.csproj", "{1567FA70-DA31-4391-AA92-9726CE0721CA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Fake", "EasyMoney.Fake\EasyMoney.Fake.csproj", "{FD70F655-082F-4D63-96F9-CC1A64CE68A7}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1567FA70-DA31-4391-AA92-9726CE0721CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1567FA70-DA31-4391-AA92-9726CE0721CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1567FA70-DA31-4391-AA92-9726CE0721CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1567FA70-DA31-4391-AA92-9726CE0721CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD70F655-082F-4D63-96F9-CC1A64CE68A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD70F655-082F-4D63-96F9-CC1A64CE68A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD70F655-082F-4D63-96F9-CC1A64CE68A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,6 +37,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051} = {7204704E-C458-4D38-9F0F-F3D16E9670D9}
+		{1567FA70-DA31-4391-AA92-9726CE0721CA} = {7204704E-C458-4D38-9F0F-F3D16E9670D9}
 		{FD70F655-082F-4D63-96F9-CC1A64CE68A7} = {7204704E-C458-4D38-9F0F-F3D16E9670D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

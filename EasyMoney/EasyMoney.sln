@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{C8315455-0592-4057-BAF6-8093CD54B565}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{7204704E-C458-4D38-9F0F-F3D16E9670D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Api", "EasyMoney.Api\EasyMoney.Api.csproj", "{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CA1CB1D-58E1-4CBF-998E-37FF3DABC051} = {7204704E-C458-4D38-9F0F-F3D16E9670D9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE13D0A0-1765-42E7-AA91-AE105C4AB462}
+	EndGlobalSection
+EndGlobal

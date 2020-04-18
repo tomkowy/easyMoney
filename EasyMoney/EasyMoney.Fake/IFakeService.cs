@@ -6,6 +6,6 @@ namespace EasyMoney.Fake
     {
         string GetFirst();
         IEnumerable<string> GetAll();
-        void Add(string value);
+        string Add(string value);
     }
 }

@@ -17,9 +17,10 @@ namespace EasyMoney.Fake
             return FakeData.First();
         }
 
-        public void Add(string value)
+        public string Add(string value)
         {
             FakeData.Add(value);
+            return value;
         }
     }
 }

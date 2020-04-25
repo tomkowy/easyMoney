@@ -1,3 +1,4 @@
+using EasyMoney.Api.Filters;
 using EasyMoney.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +22,10 @@ namespace EasyMoney.Api
         {
             services.AddControllers();
             services.AddApplication();
+
+            services.AddControllersWithViews(options =>
+                options.Filters.Add(new ApiExceptionFilter())
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

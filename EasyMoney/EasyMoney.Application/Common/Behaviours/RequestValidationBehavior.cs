@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using ValidationException = EasyMoney.Application.FakeData.Commands.Exceptions.ValidationException;
 
 namespace EasyMoney.Application.Common.Behaviours
 {
@@ -34,7 +35,6 @@ namespace EasyMoney.Application.Common.Behaviours
                     throw new ValidationException(failures);
                 }
             }
-
             return next();
         }
     }

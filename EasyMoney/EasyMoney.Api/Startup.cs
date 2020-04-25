@@ -1,4 +1,5 @@
 using EasyMoney.Api.Filters;
+using EasyMoney.Api.StartupConfig;
 using EasyMoney.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,8 @@ namespace EasyMoney.Api
             services.AddControllersWithViews(options =>
                 options.Filters.Add(new ApiExceptionFilter())
                 );
+
+            services.AddSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +38,8 @@ namespace EasyMoney.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseEasyMoneySwagger();
 
             app.UseHttpsRedirection();
 

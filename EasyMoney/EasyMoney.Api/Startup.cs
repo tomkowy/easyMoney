@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Persistence.Database;
 
 namespace EasyMoney.Api
 {
@@ -29,10 +30,11 @@ namespace EasyMoney.Api
                 );
 
             services.AddSwagger();
+            services.AddDbContext(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, EasyMoneyDbContext dbContext)
         {
             if (env.IsDevelopment())
             {
@@ -51,6 +53,8 @@ namespace EasyMoney.Api
             {
                 endpoints.MapControllers();
             });
+
+            EasyMoneyDbContextSeed.SeedData(dbContext);
         }
     }
 }

@@ -7,6 +7,8 @@ namespace Persistence.Database
     {
         public static void SeedData(EasyMoneyDbContext context)
         {
+            context.Database.EnsureCreated();
+
             if (!context.Fakes.Any())
             {
                 context.Fakes.Add(new Fake

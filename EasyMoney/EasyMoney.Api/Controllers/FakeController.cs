@@ -1,4 +1,5 @@
 ﻿using EasyMoney.Application.FakeData.Commands.AddFakeData;
+using EasyMoney.Application.FakeData.Queries.GetDateNow;
 using EasyMoney.Application.FakeData.Queries.GetFirstFakeData;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -20,6 +21,13 @@ namespace EasyMoney.Api.Controllers
         public async Task<IActionResult> AddFakeData([FromBody] AddFakeDataCommand command)
         {
             return Ok(await Mediator.Send(command));
+        }
+
+        [HttpGet("date")]
+        public async Task<IActionResult> GetDateNow()
+        {
+            var query = new GetDateNowQuery();
+            return Ok(await Mediator.Send(query));
         }
     }
 }

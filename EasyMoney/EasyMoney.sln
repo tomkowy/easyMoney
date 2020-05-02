@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Infrastructure.Services", "EasyMoney.Infrastructure.Services\EasyMoney.Infrastructure.Services.csproj", "{9E4CA527-207F-464F-B211-6F9E914A5DCA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7C5F55F2-B243-4AA6-B251-FED310864DF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Tests.FakeTest", "EasyMoney.Tests.FakeTest\EasyMoney.Tests.FakeTest.csproj", "{EB5A355A-D7C1-4B55-A7E6-F1E17ED983F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{9E4CA527-207F-464F-B211-6F9E914A5DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E4CA527-207F-464F-B211-6F9E914A5DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E4CA527-207F-464F-B211-6F9E914A5DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5A355A-D7C1-4B55-A7E6-F1E17ED983F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5A355A-D7C1-4B55-A7E6-F1E17ED983F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5A355A-D7C1-4B55-A7E6-F1E17ED983F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5A355A-D7C1-4B55-A7E6-F1E17ED983F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,8 @@ Global
 		{DFD7A39C-439E-427B-BAFB-32FC58F0186E} = {B150DCAF-0573-48F1-AD33-45C688275519}
 		{D8B9A76E-F3CF-4725-A463-4FDD62079F71} = {7204704E-C458-4D38-9F0F-F3D16E9670D9}
 		{9E4CA527-207F-464F-B211-6F9E914A5DCA} = {B150DCAF-0573-48F1-AD33-45C688275519}
+		{7C5F55F2-B243-4AA6-B251-FED310864DF2} = {7204704E-C458-4D38-9F0F-F3D16E9670D9}
+		{EB5A355A-D7C1-4B55-A7E6-F1E17ED983F1} = {7C5F55F2-B243-4AA6-B251-FED310864DF2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE13D0A0-1765-42E7-AA91-AE105C4AB462}

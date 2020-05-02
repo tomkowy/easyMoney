@@ -1,4 +1,5 @@
-﻿using EasyMoney.Application.FakeData.Commands.Exceptions;
+﻿using EasyMoney.Application.Common.Exceptions;
+using EasyMoney.Application.FakeData.Commands.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -17,6 +18,7 @@ namespace EasyMoney.Api.Filters
             {
                 { typeof(ValidationException), HandleValidationException },
                 { typeof(NotFoundException), HandleNotFoundException },
+                { typeof(BusinessException), HandleBusinessException },
             };
         }
 
@@ -83,6 +85,23 @@ namespace EasyMoney.Api.Filters
             };
 
             context.Result = new NotFoundObjectResult(details);
+
+            context.ExceptionHandled = true;
+        }
+
+        private void HandleBusinessException(ExceptionContext context)
+        {
+            var exception = context.Exception as BusinessException;
+
+            var details = new ProblemDetails()
+            {
+                Status = StatusCodes.Status400BadRequest,
+                Type = "Bad Request",
+                Title = "A business exception occurred",
+                Detail = exception.Message
+            };
+
+            context.Result = new BadRequestObjectResult(details);
 
             context.ExceptionHandled = true;
         }

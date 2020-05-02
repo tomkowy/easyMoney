@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: 
-        cd .\EasyMoney\
+      run: |
+        cd ".\EasyMoney\"
         dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore

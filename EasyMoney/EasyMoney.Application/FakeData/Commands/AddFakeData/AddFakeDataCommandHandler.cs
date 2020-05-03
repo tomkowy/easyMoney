@@ -16,7 +16,7 @@ namespace EasyMoney.Application.FakeData.Commands.AddFakeData
 
         public Task<string> Handle(AddFakeDataCommand request, CancellationToken cancellationToken)
         {
-            var addedValue = _fakeService.Add(request.Value);
+            var addedValue = _fakeService.Add(request.Value1, request.Value2, request.Value3, request.Value4);
             return Task.FromResult(addedValue);
         }
     }

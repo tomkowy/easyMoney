@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace EasyMoney.Fake
 {
@@ -6,6 +7,6 @@ namespace EasyMoney.Fake
     {
         string GetFirst();
         IEnumerable<string> GetAll();
-        string Add(string value);
+        string Add(string value1, int value2, DateTime value3, IEnumerable<string> value4);
     }
 }

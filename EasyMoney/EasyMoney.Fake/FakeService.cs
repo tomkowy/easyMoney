@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace EasyMoney.Fake
@@ -17,10 +18,10 @@ namespace EasyMoney.Fake
             return FakeData.First();
         }
 
-        public string Add(string value)
+        public string Add(string value1, int value2, DateTime valu3, IEnumerable<string> value4)
         {
-            FakeData.Add(value);
-            return value;
+            FakeData.Add(value1);
+            return value1;
         }
     }
 }

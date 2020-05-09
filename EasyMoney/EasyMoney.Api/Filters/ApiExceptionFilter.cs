@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace EasyMoney.Api.Filters
 {
@@ -24,9 +25,17 @@ namespace EasyMoney.Api.Filters
 
         public override void OnException(ExceptionContext context)
         {
-            HandleException(context);
+            var request = context.HttpContext.Request;
+            request.Body.Position = 0;
+            request.EnableBuffering();
+            var buffer = new byte[Convert.ToInt32(request.ContentLength)];
+            request.Body.Read(buffer, 0, buffer.Length);
+            var requestBody = Encoding.UTF8.GetString(buffer);
+            request.Body.Seek(0, System.IO.SeekOrigin.Begin);
 
-            base.OnException(context);
+
+            HandleException(context);
+            //base.OnException(context);
         }
 
         private void HandleException(ExceptionContext context)

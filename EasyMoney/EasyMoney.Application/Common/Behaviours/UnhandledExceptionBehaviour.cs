@@ -2,8 +2,8 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -33,7 +33,7 @@ namespace EasyMoney.Application.Common.Behaviours
                 var message = GetFullLogMessage(request);
                 _logger.LogError(ex, message);
 
-                throw;
+                throw ex;
             }
         }
 
@@ -42,20 +42,70 @@ namespace EasyMoney.Application.Common.Behaviours
             var requestType = typeof(TRequest);
 
             var requestFullName = requestType.FullName;
-            var values = GetRequestValues(request, requestType);
-            if (values.Count == 0)
-            {
-                return GetMessage(requestFullName, "No parameters");
-            }
-            var displayValue = string.Join(Environment.NewLine, values);
+            //var values = GetRequestValues(request, requestType);
+            //if (values.Count == 0)
+            //{
+            //    return GetMessage(requestFullName, "No parameters");
+            //}
+            var displayValue = string.Join(Environment.NewLine, request.ToString());
 
             return GetMessage(requestFullName, displayValue);
         }
 
         private Dictionary<string, string> GetRequestValues(TRequest request, Type requestType)
         {
-            var values = requestType.GetProperties().ToDictionary(x => x.Name, y => y.GetValue(request).ToString());
-            return values;
+
+            var dictionary = new Dictionary<string, string>();
+            MapToDictionaryInternal(dictionary, request);
+
+            //var values = requestType.GetProperties().ToDictionary(x => x.Name, y => y.GetValue(request).ToString());
+            return dictionary;
+        }
+
+
+        private void MapToDictionaryInternal(Dictionary<string, string> dictionary, object obj)
+        {
+            if (obj == null)
+            {
+                return;
+            }
+            var objType = obj.GetType();
+            if (objType.Namespace == "System")
+            {
+                dictionary.Add(objType.Name, obj.ToString());
+                return;
+            }
+
+            var properties = objType.GetProperties();
+            foreach (var property in properties)
+            {
+                object propValue = property.GetValue(obj, null);
+                var elems = propValue as IList;
+                if (elems != null)
+                {
+                    foreach (var item in elems)
+                    {
+                        MapToDictionaryInternal(dictionary, item);
+                    }
+                }
+                else
+                {
+                    // This will not cut-off System.Collections because of the first check
+                    if (property.PropertyType.Assembly == objType.Assembly)
+                    {
+                        Console.WriteLine("{0}:", property.Name);
+
+                        MapToDictionaryInternal(dictionary, propValue);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0}: {1}", property.Name, propValue);
+                        dictionary.Add(property.Name, propValue.ToString());
+                    }
+                }
+            }
+            //var values = requestType.GetProperties().ToDictionary(x => x.Name, y => y.GetValue(request).ToString());
+            //MapToDictionaryInternal(values, request, requestType);
         }
 
         private string GetMessage(string fullname, string requestParams)

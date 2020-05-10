@@ -8,14 +8,14 @@ namespace EasyMoney.Modules.FakeManageUsers.Domain.Users
         public string Email { get; private set; }
         public bool Active { get; private set; }
 
-        private User() { }
+        public User() { }
 
         private User(string email)
         {
             Email = email;
         }
 
-        internal static User Create(string email)
+        public static User Create(string email)
         {
             return new User(email);
         }

@@ -8,6 +8,8 @@ namespace Persistence.Database.Configuration
     {
         public void Configure(EntityTypeBuilder<Fake> builder)
         {
+            builder.ToTable("Fakes", "EasyMoney");
+
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Value).HasMaxLength(10);
         }

@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Modules.FakeManag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Modules.FakeManageUsers.Infrastructure", "EasyMoney.Modules.FakeManageUsers.Infrastructure\EasyMoney.Modules.FakeManageUsers.Infrastructure.csproj", "{BDC8180A-003A-4165-AEB5-EE30CFFA2D17}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0B0C1AD8-B9F2-4FD8-A56A-1DBAEDEE9AF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +102,7 @@ Global
 		{BDF0B06E-61E8-454E-9BAD-BA529889A44A} = {D1C7412A-82BF-4B98-ADFB-41A61DF786DA}
 		{2349BE9F-93E6-4A10-B0A3-7E8CDBB16881} = {D1C7412A-82BF-4B98-ADFB-41A61DF786DA}
 		{BDC8180A-003A-4165-AEB5-EE30CFFA2D17} = {D1C7412A-82BF-4B98-ADFB-41A61DF786DA}
+		{0B0C1AD8-B9F2-4FD8-A56A-1DBAEDEE9AF3} = {D1C7412A-82BF-4B98-ADFB-41A61DF786DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE13D0A0-1765-42E7-AA91-AE105C4AB462}

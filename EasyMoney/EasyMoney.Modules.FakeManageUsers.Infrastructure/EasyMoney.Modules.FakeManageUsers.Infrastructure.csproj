@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj" />
     <ProjectReference Include="..\EasyMoney.Modules.FakeManageUsers.Domain\EasyMoney.Modules.FakeManageUsers.Domain.csproj" />
   </ItemGroup>
 

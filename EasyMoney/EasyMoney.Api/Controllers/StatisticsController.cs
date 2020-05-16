@@ -1,4 +1,5 @@
-﻿using EasyMoney.Modules.FakeNotifications.Application.GetSentEmailsCount;
+﻿using EasyMoney.Modules.FakeStatistics.Application.GetEmailStatistics;
+using EasyMoney.Modules.FakeStatistics.Application.GetUsersStatistics;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -11,7 +12,14 @@ namespace EasyMoney.Api.Controllers
         [HttpGet("emails/sent/count")]
         public async Task<ActionResult<int>> GetSentEmailsCount()
         {
-            var count = await Mediator.Send(new GetSentEmailsCountQuery());
+            var count = await Mediator.Send(new GetEmailStatisticsQuery());
+            return Ok(count);
+        }
+
+        [HttpGet("users/count")]
+        public async Task<ActionResult<UserStatisticsVM>> GetUsersCount()
+        {
+            var count = await Mediator.Send(new GetUsersStatisticsQuery());
             return Ok(count);
         }
     }

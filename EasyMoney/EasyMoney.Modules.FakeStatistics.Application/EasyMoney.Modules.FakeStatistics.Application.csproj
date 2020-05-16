@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EasyMoney.Modules.FakeManageUsers.Application\EasyMoney.Modules.FakeManageUsers.Application.csproj" />
     <ProjectReference Include="..\EasyMoney.Modules.FakeNotifications.Application\EasyMoney.Modules.FakeNotifications.Application.csproj" />
   </ItemGroup>
 

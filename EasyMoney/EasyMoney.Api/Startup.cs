@@ -5,6 +5,7 @@ using EasyMoney.Application;
 using EasyMoney.Infrastructure.Services;
 using EasyMoney.Modules.FakeManageUsers.Application;
 using EasyMoney.Modules.FakeNotifications.Application;
+using EasyMoney.Modules.FakeStatistics.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -26,9 +27,12 @@ namespace EasyMoney.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             services.AddApplication();
             services.AddFakeNotificationApplication();
+            services.AddFakeStatisticsApplication();
             services.AddFakeManageUsersApplication();
+
             services.AddInfrastructureServices();
 
             services.AddControllersWithViews(options =>

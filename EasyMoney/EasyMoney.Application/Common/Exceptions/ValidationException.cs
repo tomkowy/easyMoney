@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EasyMoney.Application.FakeData.Commands.Exceptions
+namespace EasyMoney.Application.Common.Exceptions
 {
     public class ValidationException : Exception
     {

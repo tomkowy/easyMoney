@@ -1,5 +1,4 @@
 ﻿using EasyMoney.Application.Common.Behaviours;
-using EasyMoney.Fake;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +14,6 @@ namespace EasyMoney.Application
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
-            services.AddScoped<IFakeService, FakeService>();
             return services;
         }
     }

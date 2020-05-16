@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EasyMoney.Application.FakeData.Commands.Exceptions
+namespace EasyMoney.Application.Common.Exceptions
 {
     public class NotFoundException : Exception
     {

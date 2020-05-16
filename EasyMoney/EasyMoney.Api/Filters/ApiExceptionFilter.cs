@@ -1,5 +1,4 @@
 ﻿using EasyMoney.Application.Common.Exceptions;
-using EasyMoney.Application.FakeData.Commands.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;

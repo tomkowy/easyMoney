@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ValidationException = EasyMoney.Application.FakeData.Commands.Exceptions.ValidationException;
+using ValidationException = EasyMoney.Application.Common.Exceptions.ValidationException;
 
 namespace EasyMoney.Application.Common.Behaviours
 {

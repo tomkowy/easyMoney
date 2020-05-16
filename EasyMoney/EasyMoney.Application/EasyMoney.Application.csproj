@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EasyMoney.Fake\EasyMoney.Fake.csproj" />
     <ProjectReference Include="..\EasyMoney.Infrastructure.Services\EasyMoney.Infrastructure.Services.csproj" />
   </ItemGroup>
 

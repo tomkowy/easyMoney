@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FakeNotifications", "FakeNo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9BA80D24-8967-45AF-8F3C-7461F0F237F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Modules.FakeNotifications.Domain", "EasyMoney.Modules.Notifications.Domain\EasyMoney.Modules.FakeNotifications.Domain.csproj", "{6D3F04CD-C9F4-444D-8137-80DF093F3ED3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Modules.FakeNotifications.Domain", "EasyMoney.Modules.FakeNotifications.Domain\EasyMoney.Modules.FakeNotifications.Domain.csproj", "{6D3F04CD-C9F4-444D-8137-80DF093F3ED3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMoney.Modules.FakeNotifications.Infrastructure", "EasyMoney.Modules.FakeNotifications.Infrastructure\EasyMoney.Modules.FakeNotifications.Infrastructure.csproj", "{50FA26A9-A54C-4A7E-B9DD-1DE5A82AA5BD}"
 EndProject

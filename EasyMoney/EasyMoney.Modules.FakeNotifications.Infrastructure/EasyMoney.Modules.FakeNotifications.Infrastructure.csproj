@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj" />
-    <ProjectReference Include="..\EasyMoney.Modules.Notifications.Domain\EasyMoney.Modules.FakeNotifications.Domain.csproj" />
+    <ProjectReference Include="..\EasyMoney.Modules.FakeNotifications.Domain\EasyMoney.Modules.FakeNotifications.Domain.csproj" />
   </ItemGroup>
 
 </Project>

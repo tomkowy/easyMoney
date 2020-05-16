@@ -3,6 +3,7 @@ using EasyMoney.Api.Filters;
 using EasyMoney.Api.StartupConfig;
 using EasyMoney.Application;
 using EasyMoney.Infrastructure.Services;
+using EasyMoney.Modules.FakeNotifications.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,7 @@ namespace EasyMoney.Api
         {
             services.AddControllers();
             services.AddApplication();
+            services.AddFakeNotificationApplication();
             services.AddInfrastructureServices();
 
             services.AddControllersWithViews(options =>

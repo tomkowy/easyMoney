@@ -9,7 +9,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.3" />
   </ItemGroup>
 
@@ -17,6 +17,7 @@
     <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj" />
     <ProjectReference Include="..\EasyMoney.Application\EasyMoney.Application.csproj" />
     <ProjectReference Include="..\EasyMoney.Modules.FakeManageUsers.Infrastructure\EasyMoney.Modules.FakeManageUsers.Infrastructure.csproj" />
+    <ProjectReference Include="..\EasyMoney.Modules.FakeNotifications.Application\EasyMoney.Modules.FakeNotifications.Application.csproj" />
     <ProjectReference Include="..\EasyMoney.Modules.FakeNotifications.Infrastructure\EasyMoney.Modules.FakeNotifications.Infrastructure.csproj" />
   </ItemGroup>
 

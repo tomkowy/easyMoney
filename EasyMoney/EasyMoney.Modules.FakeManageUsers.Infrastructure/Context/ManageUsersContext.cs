@@ -6,14 +6,14 @@ using System.Reflection;
 
 namespace EasyMoney.Modules.FakeManageUsers.Infrastructure.Context
 {
-    public class ManageUserContext : DbContext
+    public class ManageUsersContext : DbContext
     {
         public DbSet<User> Users { get; set; }
 
         private readonly ConnectionStrings _config;
         private const string Schema = "ManageUser";
 
-        public ManageUserContext(IOptions<ConnectionStrings> config, DbContextOptions<ManageUserContext> options) : base(options)
+        public ManageUsersContext(IOptions<ConnectionStrings> config, DbContextOptions<ManageUsersContext> options) : base(options)
         {
             _config = config.Value;
         }

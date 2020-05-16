@@ -8,7 +8,7 @@ namespace EasyMoney.Modules.FakeManageUsers.Infrastructure
     {
         public static IServiceCollection AddManageUserContext(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<ManageUserContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<ManageUsersContext>(options => options.UseSqlServer(connectionString));
             return services;
         }
     }

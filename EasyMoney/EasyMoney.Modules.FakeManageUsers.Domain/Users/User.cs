@@ -22,7 +22,7 @@ namespace EasyMoney.Modules.FakeManageUsers.Domain.Users
             return new User(email);
         }
 
-        internal void Activate()
+        public void Activate()
         {
             Active = true;
         }

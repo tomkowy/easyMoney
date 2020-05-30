@@ -10,15 +10,16 @@ namespace EasyMoney.Modules.FakeManageUsers.Domain.Users
 
         public User() { }
 
-        private User(string email)
+        private User(string email, string name)
         {
             Email = email;
+            UserName = name;
             CreatedDate = DateTime.Today;
         }
 
-        public static User Create(string email)
+        public static User Create(string email, string name)
         {
-            return new User(email);
+            return new User(email, name);
         }
 
         public void Activate()

@@ -9,6 +9,7 @@ namespace EasyMoney.Api.StartupConfig
         public static void AddConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<ConnectionStrings>(configuration.GetSection("ConnectionStrings"));
+            services.Configure<Authentication>(configuration.GetSection("Authentication"));
         }
     }
 }

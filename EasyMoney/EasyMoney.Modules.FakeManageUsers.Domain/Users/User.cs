@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 
 namespace EasyMoney.Modules.FakeManageUsers.Domain.Users
 {
-    public class User
+    public class User : IdentityUser<Guid>
     {
-        public Guid Id { get; private set; }
-        public string Email { get; private set; }
         public bool Active { get; private set; }
         public DateTime CreatedDate { get; set; }
 

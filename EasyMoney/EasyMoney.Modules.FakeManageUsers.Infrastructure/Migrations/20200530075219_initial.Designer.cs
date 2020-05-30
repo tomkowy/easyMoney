@@ -4,14 +4,16 @@ using EasyMoney.Modules.FakeManageUsers.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EasyMoney.Modules.FakeManageUsers.Infrastructure.Migrations
 {
     [DbContext(typeof(ManageUsersContext))]
-    partial class ManageUsersContextModelSnapshot : ModelSnapshot
+    [Migration("20200530075219_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

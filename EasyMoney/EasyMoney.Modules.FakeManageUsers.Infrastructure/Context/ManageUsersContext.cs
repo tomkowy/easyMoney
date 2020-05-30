@@ -1,15 +1,15 @@
 ﻿using Common.Configuration;
 using EasyMoney.Modules.FakeManageUsers.Domain.Users;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System;
 using System.Reflection;
 
 namespace EasyMoney.Modules.FakeManageUsers.Infrastructure.Context
 {
-    public class ManageUsersContext : DbContext
+    public class ManageUsersContext : IdentityDbContext<User, ApplicationRole, Guid>
     {
-        public DbSet<User> Users { get; set; }
-
         private readonly ConnectionStrings _config;
         private const string Schema = "ManageUser";
 

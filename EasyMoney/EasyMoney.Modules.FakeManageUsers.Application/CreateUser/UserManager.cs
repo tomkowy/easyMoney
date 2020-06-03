@@ -31,8 +31,8 @@ namespace EasyMoney.Modules.FakeManageUsers.Application.CreateUser
             var result = await _userManager.CreateAsync(newUser, password);
             if (!result.Succeeded)
             {
-                //todo throw identity exceptions
-                throw new Exception("Create user exception");
+                //todo fix global catch for this exception
+                throw new CreateUserException(result.Errors);
             }
             return newUser.Id;
         }

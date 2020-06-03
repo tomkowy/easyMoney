@@ -24,9 +24,10 @@ namespace EasyMoney.Application.Common.Behaviours
             {
                 return await next();
             }
-            catch (BusinessException)
+            catch (BusinessException e)
             {
-                throw;
+                //todo fix
+                throw new BusinessException(e.Message);
             }
             catch (Exception ex)
             {

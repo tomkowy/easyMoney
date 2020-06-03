@@ -15,8 +15,8 @@ namespace EasyMoney.Modules.FakeManageUsers.Application.Authenticate
 
         public async Task<AuthenticateUserVM> Handle(AuthenticateCommand request, CancellationToken cancellationToken)
         {
-            var authenticateUser = await _signInManager.Authenticate(request.UserName, request.Password);
-            return authenticateUser;
+            var token = await _signInManager.Authenticate(request.UserName, request.Password);
+            return new AuthenticateUserVM(request.UserName, token);
         }
     }
 }

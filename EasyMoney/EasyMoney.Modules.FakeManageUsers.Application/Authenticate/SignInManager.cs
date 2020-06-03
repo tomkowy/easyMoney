@@ -20,25 +20,22 @@ namespace EasyMoney.Modules.FakeManageUsers.Application.Authenticate
             _context = context;
         }
 
-        public async Task<AuthenticateUserVM> Authenticate(string userName, string password)
+        public async Task<string> Authenticate(string userName, string password)
         {
             var user = _context.Users.SingleOrDefault(x => x.UserName == userName);
             if (user == null)
             {
-
                 throw new LoginOrPasswordAreIncorrectException();
             }
 
             var results = await _signInManager.PasswordSignInAsync(userName, password, false, false);
-
             if (!results.Succeeded)
             {
                 throw new LoginOrPasswordAreIncorrectException();
             }
 
             var token = _tokenService.GenerateJwtForUser(user.Id);
-            //todo should use vm here or just in command?
-            return new AuthenticateUserVM(user.UserName, user.Email, token);
+            return token;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace EasyMoney.Modules.FakeManageUsers.Application.CreateUser
             _context = context;
         }
 
-        public async Task<Guid> CreateAccount(string name, string email, string password)
+        public async Task<Guid> CreateAccount(string email, string password)
         {
             var user = _context.Users.SingleOrDefault(x => x.Email == email);
             if (user != null)
@@ -27,7 +27,7 @@ namespace EasyMoney.Modules.FakeManageUsers.Application.CreateUser
                 throw new NotUniqueEmailException(email);
             }
 
-            var newUser = User.Create(email, name);
+            var newUser = User.Create(email);
             var result = await _userManager.CreateAsync(newUser, password);
             if (!result.Succeeded)
             {

@@ -15,8 +15,8 @@ namespace EasyMoney.Modules.FakeManageUsers.Application.CreateUser
 
         public async Task<CreateUserVM> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var userId = await _userManager.CreateAccount(request.Name, request.Email, request.Password);
-            return new CreateUserVM(userId, request.Name, request.Email);
+            var userId = await _userManager.CreateAccount(request.Email, request.Password);
+            return new CreateUserVM(userId, request.Email);
         }
     }
 }
